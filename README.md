@@ -1,4 +1,4 @@
-acmX_parking
+parking
 ============
 
 acmX real-time campus parking information.
