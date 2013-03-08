@@ -1,13 +1,13 @@
 development:
   adapter: sqlite3
   encoding: unicode
-  database: parking_development
+  database: db/parking_development
   pool: 5
     
 test:
   adapter: postgresql
   encoding: unicode
-  database: parking_test
+  database: db/parking_test
   pool: 5
   username:
   password:
