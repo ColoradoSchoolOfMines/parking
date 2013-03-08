@@ -23,6 +23,11 @@ The sensors just measure delta in cars
 
 Parking Lot has many Events
 
+Do we need to clear the database every night to keep the size down?
+
+If the events table gets large, would it make sense to keep a current_capacity
+associated with each parking lot?
+
 #### Case 2:
 The sensors provide some sense of exact spaces being occupied/unoccupied
 - Parking Lot
