@@ -61,10 +61,10 @@ Arduino hardware (or even an ATTiny85) to process sensor data and send via wirel
 Waterproof case, solar panels, li-po batteries, ATTiny85, wireless xbee transmitters and receivers.  - Roy has these hardware items for immediate R&D
 
 Sensors possiblities: 
-hardened rubber 'tubes' with conductors inside layed across ingress and egress areas for lots.
-lasers
-sonar range finders
-cameras
+- hardened rubber 'tubes' with conductors inside layed across ingress and egress areas for lots.
+- lasers
+- sonar range finders
+- cameras
 
 GPS chip for theft mitigation?
 
