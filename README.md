@@ -34,7 +34,7 @@ The sensors provide some sense of exact spaces being occupied/unoccupied
     - Space_Location (in regards to the lot)
         - Row
         - offset
-
+<pre>
               r1    r2    r3  r4
               ---------  ---------
                0  - 0     0  -  0
@@ -46,7 +46,8 @@ The sensors provide some sense of exact spaces being occupied/unoccupied
                3  - 3     3  -  3
               ---------  ---------
                4  - 4  
-              --------- 
+               --------- 
+</pre>
 
 Parking Lot has many Parking Spaces
 
