@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
  */
+ 
+@import "bootstrap";
+ 
+ body {
+ 	text-align:center;
+ 	margin:0 auto;
+ 	padding-top:40px;
+ }
+
+ #body {
+ 	width:900px;
+ 	margin:0 auto;
+ 	text-align:left;
+ 	padding-left:20px;
+ 	padding-right:20px;
+ }
