@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %title Parking
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    /= favicon_link_tag "favicon.ico"
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %ul.nav
+            %li
+              %span.brand= link_to "acmX - Parking", root_path
+            %li= link_to 'Parking Lots', lots_path
+            /%li= link_to 'Mint Stats', statistics_path, :title => "Click to view general statistics"
+            /%li= link_to 'General Info', :information, :title => "Click to view general information about MapleMint"
+            /%li= link_to 'News and Blog', blog_path, :title => "Click to view news"
+            /%li.divider-vertical
+            /%li= link_to "Login", :login
+            /%li=link_to "Register", :register
+    #body
+      /= render "layouts/flash", flash: flash, events: nil
+      = yield
