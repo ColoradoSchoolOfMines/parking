@@ -10,6 +10,20 @@ class LotsController < ApplicationController
     end
   end
 
+  def delta
+    @lot = Lot.find_by_name(params[:name])
+
+    respond_to do |format|
+      if @lot.update_attributes(:cars => @lot.cars + params[:delta])
+        format.html { redirect_to @lot, notice: 'Lot was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @lot.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # GET /lots/1
   # GET /lots/1.json
   def show
