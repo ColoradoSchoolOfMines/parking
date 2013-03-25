@@ -5,6 +5,16 @@
   <%= @lot.name %>
 </p>
 
+<p>
+  <b>Total Spots:</b>
+  <%= @lot.total_spots %>
+</p>
+
+<p>
+  <b>Cars in Lot:</b>
+  <%= @lot.cars %>
+</p>
+
 
 <%= link_to 'Edit', edit_lot_path(@lot) %> |
 <%= link_to 'Back', lots_path %>
