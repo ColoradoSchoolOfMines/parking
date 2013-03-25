@@ -23,6 +23,11 @@ The sensors just measure delta in cars
 
 Parking Lot has many Events
 
+Do we need to clear the database every night to keep the size down?
+
+If the events table gets large, would it make sense to keep a current_capacity
+associated with each parking lot?
+
 #### Case 2:
 The sensors provide some sense of exact spaces being occupied/unoccupied
 - Parking Lot
@@ -61,10 +66,10 @@ Arduino hardware (or even an ATTiny85) to process sensor data and send via wirel
 Waterproof case, solar panels, li-po batteries, ATTiny85, wireless xbee transmitters and receivers.  - Roy has these hardware items for immediate R&D
 
 Sensors possiblities: 
-hardened rubber 'tubes' with conductors inside layed across ingress and egress areas for lots.
-lasers
-sonar range finders
-cameras
+- hardened rubber 'tubes' with conductors inside layed across ingress and egress areas for lots.
+- lasers
+- sonar range finders
+- cameras
 
 GPS chip for theft mitigation?
 
