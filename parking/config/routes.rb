@@ -1,8 +1,8 @@
 Parking::Application.routes.draw do
+
+  match 'lots/delta' => 'lots#delta', :as => :delta
+  
   resources :lots
-
-
-  match 'updatelot' => 'lots#delta', :as => :updatelot
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

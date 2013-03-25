@@ -14,7 +14,7 @@ class LotsController < ApplicationController
     @lot = Lot.find_by_name(params[:name])
 
     respond_to do |format|
-      if @lot.update_attributes(:cars => @lot.cars + params[:delta])
+      if @lot.update_attributes(:cars => (@lot.cars + Integer(params[:delta])))
         format.html { redirect_to @lot, notice: 'Lot was successfully updated.' }
         format.json { head :no_content }
       else
