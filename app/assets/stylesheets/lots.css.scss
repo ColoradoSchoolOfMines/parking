@@ -2,10 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .lotView {
+    //overflow: scroll;
 }
 
 .sidebar-nav {
     padding:  9px 0;
+    margin: 0px;
+    background-color:  white;
 }
 
 .sidebar-nav-fixed {
@@ -21,5 +24,9 @@
 .mapview {
     background-color:  #b1b1b1;
     text-align:  center;
+    img {
+        max-width:  none;
+        max-height:  none;
+    }
 }
 
