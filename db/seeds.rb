@@ -5,3 +5,15 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+lots = Lot.create([{ 
+        name: 'CTLM Upper',
+        total_spots: 300,
+        cars: 300,
+    },
+    {
+        name: 'REC Center',
+        total_spots: 50,
+        cars: 20,
+    }])
+
