@@ -4,6 +4,11 @@
       .sidebar-nav.sidebar-nav-fixed
         %h2 Click a parking lot to get started
     .mapview.span9
-      =image_tag "parking.png"
+      %map{name:"lot_spots"}
+        -@lots.each do |lot|
+          %area{shape:"poly",coords:get_coords(lot),href:lot_path(lot)}
+
+      =image_tag "parking.png", usemap: "#lot_spots"
+
 
 
