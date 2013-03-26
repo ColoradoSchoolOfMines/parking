@@ -6,14 +6,38 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-lots = Lot.create([{ 
-        name: 'CTLM Upper',
-        total_spots: 300,
-        cars: 300,
+ctlm = Lot.create({ 
+    name: 'CTLM Upper',
+    total_spots: 300,
+    cars: 300
+})
+
+rec = Lot.create(
+    {
+    name: 'REC Center',
+    total_spots: 50,
+    cars: 20,
+})
+
+rec.coordinates.create([ 
+   {
+        order: 0,
+        x: 549,
+        y: 227
     },
     {
-        name: 'REC Center',
-        total_spots: 50,
-        cars: 20,
+        order: 1,
+        x: 653,
+        y: 227
+    },
+    {
+        order: 2,
+        x: 656, 
+        y: 321,
+    },
+    {
+        order: 3,
+        x: 550,
+        y: 323
     }])
 
