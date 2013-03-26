@@ -58,6 +58,8 @@ Parking Lot has many Parking Spaces
 
 Do we still need a sense of events for history tracking?
 
+From a visitor perspective, someone who doesn't know what a blue or yellow lot is or is new to the golden area, we may want a way to exlain how parking works, areas they can park, fees, and possibly suggest to go to mines parking garage if they want free parking.
+
 Hardware
 ---
 CTLM lot to start?
