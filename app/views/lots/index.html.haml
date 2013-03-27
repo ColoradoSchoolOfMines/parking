@@ -3,10 +3,10 @@
     - @lots.each do |lot|
       %area{shape:"poly",coords:get_coords(lot),href:lot_path(lot)}
 
-  = image_tag "parking.png", usemap: "#lot_spots", style:"width:500px; height:500px;", ondragstart: "return false"
+  = image_tag "parking.png", usemap: "#lot_spots", style:"width:450px; height:450px;", ondragstart: "return false"
   %hr/
-  %span{style:"height:15px; background-color:#FF0; border:1px solid #000;"} &nbsp; &nbsp; &nbsp;
-  Commuter
-  %span{style:"height:15px; background-color:#00F; border:1px solid #000;"} &nbsp; &nbsp; &nbsp;
+  %span{style:"height:15px; background-color:#ED0; border:1px solid #000;"} &nbsp; &nbsp; &nbsp;
+  Commuter &nbsp; &nbsp;
+  %span{style:"height:15px; background-color:#09F; border:1px solid #000;"} &nbsp; &nbsp; &nbsp;
   General
   %hr/

@@ -1,0 +1,13 @@
+%fieldset
+  %legend= @lot.name
+
+%p
+  %b Total Spots:
+  = @lot.total_spots
+%p
+  %b Cars in Lot:
+  = @lot.cars
+
+.form-actions
+  = link_to 'Edit', edit_lot_path(@lot), :class => 'btn'
+  = link_to 'Cancel', lots_path, :class => 'btn'
