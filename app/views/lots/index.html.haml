@@ -1,14 +1,6 @@
-.lotView.container-fluid
-  .row-fluid
-    .span3
-      .sidebar-nav.sidebar-nav-fixed
-        %h2 Click a parking lot to get started
-    .mapview.span9
-      %map{name:"lot_spots"}
-        -@lots.each do |lot|
-          %area{shape:"poly",coords:get_coords(lot),href:lot_path(lot)}
+.mapview
+  %map{name:"lot_spots"}
+    - @lots.each do |lot|
+      %area{shape:"poly",coords:get_coords(lot),href:lot_path(lot)}
 
-      =image_tag "parking.png", usemap: "#lot_spots"
-
-
-
+  = image_tag "parking.png", usemap: "#lot_spots", style:"width:400px; height:400px;"
