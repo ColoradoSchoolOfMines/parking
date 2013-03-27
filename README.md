@@ -58,6 +58,16 @@ Parking Lot has many Parking Spaces
 
 Do we still need a sense of events for history tracking?
 
+From a visitor perspective, someone who doesn't know what a blue or yellow lot
+is or is new to the golden area, we may want a way to explain how parking works,
+areas they can park, fees, and possibly suggest to go to mines parking garage if
+they want free parking.
+
+A though might be to be able to let "admins" fix errors in the database via a
+unique interface. Events inserted into the db by the admin should be flagged
+differently than normal/natural events so that they can be filtered differently
+when doing analysis.
+
 Hardware
 ---
 CTLM lot to start?

@@ -1,3 +1,36 @@
 // Place all the styles related to the Lots controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.lotView {
+    background-color:  #b1b1b1;
+}
+
+.sidebar-nav {
+    margin: 0px;
+    background-color:  white;
+}
+
+.sidebar-nav-fixed {
+    top:  40px;
+    left: 0px;
+    bottom: 0px;
+    padding-left: 10px;
+    margin-right: 0px;
+    position: fixed;
+    width:  25%;
+
+    h2 {
+        font-size:  1.5em;
+    }
+}
+
+.mapview {
+    margin-left: 0px;
+    background-color:  #b1b1b1;
+    text-align:  center;
+    img {
+        max-width:  none;
+        max-height:  none;
+    }
+}
+
