@@ -21,6 +21,9 @@
     .field
       = f.label :cars
       = f.number_field :cars
+    .field
+      = f.label :type_type, "Type"
+      = f.select(:type_type, %w[ commuter general ], { :include_blank => false })
     .form-actions
       = f.submit nil, :class => 'btn btn-primary'
       = link_to 'Cancel', lots_path, :class => 'btn'

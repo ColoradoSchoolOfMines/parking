@@ -21,24 +21,6 @@
             /%li= link_to "Login", :login
             /%li=link_to "Register", :register
     #body
-      #flashcontainer
-        - flash.each do |key, msg|
-          - if key == :information
-            .alert.alert-info
-              %button.close{:'data-dismiss' => "alert"} ×
-              = msg
-          - if key == :notice
-            .alert.alert-success
-              %button.close{:'data-dismiss' => "alert"} ×
-              = msg
-          - if key == :warning
-            .alert
-              %button.close{:'data-dismiss' => "alert"} ×
-              = msg
-          - if key == :error
-            .alert.alert-error
-              %button.close{:'data-dismiss' => "alert"} ×
-              = msg
       - if params[:controller] = "lots"
         .span2
           .sidebar-nav.sidebar-nav-fixed
@@ -58,4 +40,22 @@
             
       .span2
       .span8
+        #flashcontainer
+          - flash.each do |key, msg|
+            - if key == :information
+              .alert.alert-info
+                %button.close{:'data-dismiss' => "alert"} ×
+                = msg
+            - if key == :notice
+              .alert.alert-success
+                %button.close{:'data-dismiss' => "alert"} ×
+                = msg
+            - if key == :warning
+              .alert
+                %button.close{:'data-dismiss' => "alert"} ×
+                = msg
+            - if key == :error
+              .alert.alert-error
+                %button.close{:'data-dismiss' => "alert"} ×
+                = msg
         = yield

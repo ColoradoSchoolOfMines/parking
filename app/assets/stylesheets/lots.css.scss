@@ -10,6 +10,15 @@
     margin-left: 0px;
     background-color:  #b1b1b1;
     text-align:  center;
+    border:1px solid #888;
+    padding-bottom:20px;
+    border-radius:10px;
+    
+    hr {
+        border-top:1px solid #888;
+        border-bottom:1px solid #ccc;
+    }
+    
     img {
         width:450px;
         height:450px;
