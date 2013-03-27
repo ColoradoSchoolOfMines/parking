@@ -20,7 +20,7 @@
             /%li.divider-vertical
             /%li= link_to "Login", :login
             /%li=link_to "Register", :register
-    #body
+    #body{style:"padding-top:15px;"}
       #flashcontainer
         - flash.each do |key, msg|
           - if key == :information
