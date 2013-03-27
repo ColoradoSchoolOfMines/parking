@@ -20,6 +20,23 @@ body {
 }
 
 #body {
+  padding-top:15px;
 	margin:0 auto;
 	padding-left:10px;
+}
+
+.sidebar-nav {
+    margin: 0px;
+    background-color:#EEE;
+    border-right:1px solid #CCC;
+}
+
+.sidebar-nav-fixed {
+    top:  40px;
+    left: 0px;
+    bottom: 0px;
+    padding-left: 10px;
+    margin-right: 0px;
+    position: fixed;
+    width:  25%;
 }

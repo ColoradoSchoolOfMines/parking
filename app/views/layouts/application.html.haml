@@ -20,7 +20,7 @@
             /%li.divider-vertical
             /%li= link_to "Login", :login
             /%li=link_to "Register", :register
-    #body{style:"padding-top:15px;"}
+    #body
       #flashcontainer
         - flash.each do |key, msg|
           - if key == :information
@@ -41,7 +41,7 @@
               = msg
       - if params[:controller] = "lots"
         .span2
-          .sidebar-nav.sidebar-nav-fixed{style:"background-color:#EEE; border-right:1px solid #CCC;"}
+          .sidebar-nav.sidebar-nav-fixed
             %fieldset
               %legend Parking Lots
 
