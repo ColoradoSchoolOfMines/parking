@@ -15,6 +15,3 @@
 /tmp
 db/parking_development
 parking_development
-
-# Ignore application secret token
-config/initializers/secret_token.rb
