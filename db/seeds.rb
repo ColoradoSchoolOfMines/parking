@@ -12,32 +12,38 @@ ctlm = Lot.create({
     cars: 300
 })
 
-rec = Lot.create(
+rec = Lot.new(
     {
     name: 'REC Center',
     total_spots: 50,
     cars: 20,
+    type_type: "blue"
 })
 
-rec.coordinates.create([ 
-   {
-        order: 0,
-        x: 549,
-        y: 227
-    },
-    {
-        order: 1,
-        x: 653,
-        y: 227
-    },
-    {
-        order: 2,
-        x: 656, 
-        y: 321,
-    },
-    {
-        order: 3,
-        x: 550,
-        y: 323
-    }])
+if !(rec.valid?)
+    puts rec.errors.full_messages.join(";")
+else
+    rec.save
 
+    rec.coordinates.create([ 
+        {
+            order: 0,
+            x: 549,
+            y: 227
+        },
+        {
+            order: 1,
+            x: 653,
+            y: 227
+        },
+        {
+            order: 2,
+            x: 656, 
+            y: 321,
+        },
+        {
+            order: 3,
+            x: 550,
+            y: 323
+        }])
+end
