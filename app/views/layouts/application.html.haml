@@ -9,6 +9,7 @@
     %meta{id:"viewport",
           name:"viewport",
           content:"width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;"}
+
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
@@ -17,50 +18,29 @@
             %li
               %span.brand= link_to "acmX - Parking", root_path
             %li= link_to 'Parking Lots', lots_path, :title => "Click to see all parking lots"
-            /%li.divider-vertical
-            /%li= link_to "Login", :login
-            /%li=link_to "Register", :register
-    #body
-      - if params[:controller] = "lots"
+  #body
+    .container
+      .row
         .span2
           .sidebar-nav.sidebar-nav-fixed
-            %fieldset
-              %legend Parking Lots
-
-              %table.table.table-striped
-                %thead
-                  %tr
-                    %th Name
-                    %th Open Spots
-                    %th 
-                %tbody
-                  - Lot.all.each do |lot|
-                    %tr
-                      %td
-                        %span{style:"background-color:#{(lot.type_type == 'commuter') ? '#ED0' : '#09F' };"} &nbsp;
-                        = lot.name
-                      %td= lot.total_spots-lot.cars
-                      %td= link_to "Open", lot_path(lot), class: "btn btn-mini"
-            = link_to "Add Lot (for now)", new_lot_path
-            
-      .span2
-      .span8
-        #flashcontainer
-          - flash.each do |key, msg|
-            - if key == :information
-              .alert.alert-info
-                %button.close{:'data-dismiss' => "alert"} ×
-                = msg
-            - if key == :notice
-              .alert.alert-success
-                %button.close{:'data-dismiss' => "alert"} ×
-                = msg
-            - if key == :warning
-              .alert
-                %button.close{:'data-dismiss' => "alert"} ×
-                = msg
-            - if key == :error
-              .alert.alert-error
-                %button.close{:'data-dismiss' => "alert"} ×
-                = msg
-        = yield
+            = content_for :side_pane
+        .span8
+          #flashcontainer
+            - flash.each do |key, msg|
+              - if key == :information
+                .alert.alert-info
+                  %button.close{:'data-dismiss' => "alert"} ×
+                  = msg
+              - if key == :notice
+                .alert.alert-success
+                  %button.close{:'data-dismiss' => "alert"} ×
+                  = msg
+              - if key == :warning
+                .alert
+                  %button.close{:'data-dismiss' => "alert"} ×
+                  = msg
+              - if key == :error
+                .alert.alert-error
+                  %button.close{:'data-dismiss' => "alert"} ×
+                  = msg
+          = yield

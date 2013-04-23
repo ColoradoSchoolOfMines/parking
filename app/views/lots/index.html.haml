@@ -1,11 +1,7 @@
+= render "side_pane"
 .mapview
   %map{name:"lot_spots"}
     - @lots.each do |lot|
-      %area{shape:"poly",coords:get_coords(lot),href:lot_path(lot)}
+      %area{shape:"poly",coords:get_coords(lot, :medium),href:lot_path(lot)}
 
-  = image_tag "parking.png", usemap: "#lot_spots", ondragstart: "return false" #the ondragstart thing is to prevent draggin the image (better ux)
-  %hr/
-  %span.legend-badge{style:"background-color:#ED0;"} &nbsp; &nbsp; &nbsp;
-  Commuter &nbsp; &nbsp;
-  %span.legend-badge{style:"background-color:#09F;"} &nbsp; &nbsp; &nbsp;
-  General
+  = image_tag get_image_name(:medium), usemap: "#lot_spots", ondragstart: "return false" #the ondragstart thing is to prevent draggin the image (better ux)
