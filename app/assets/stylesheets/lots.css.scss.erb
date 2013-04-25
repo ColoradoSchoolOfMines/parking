@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 <% environment.context_class.instance_eval { include LotsHelper } %>
-$img-width: <%= get_size_for_dimension( :original, Parking::Application.config.x)%>px;
-$img-height: <%= get_size_for_dimension( :original, Parking::Application.config.y )%>px;
+$img-width: <%= get_size_for_dimension( :medium, Parking::Application.config.x)%>px;
+$img-height: <%= get_size_for_dimension( :medium, Parking::Application.config.y )%>px;
 .lotView {
     background-color:  #b1b1b1;
 }
