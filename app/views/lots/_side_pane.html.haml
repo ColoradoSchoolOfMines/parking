@@ -1,20 +1,21 @@
 - content_for :side_pane do
-  %fieldset
-    %legend Parking Lots
+  .well.lotView
+    %fieldset
+      %legend Parking Lots
 
-    %table.table.table-striped
-      %thead
-        %tr
-          %th Name
-          %th Open Spots
-          %th 
-      %tbody
-        - Lot.all.each do |lot|
+      %table.table.table-striped
+        %thead
           %tr
-            %td
-              %span{style:"background-color:#{(lot.type_type == 'commuter') ? '#ED0' : '#09F' };"} &nbsp;
-              = lot.name
-            %td= lot.total_spots-lot.cars
-            %td= link_to "Open", lot_path(lot), class: "btn btn-mini"
-    = link_to "Add Lot (for now)", new_lot_path
+            %th Name
+            %th Open Spots
+            %th 
+        %tbody
+          - Lot.all.each do |lot|
+            %tr
+              %td
+                %span{style:"background-color:#{(lot.type_type == 'commuter') ? '#ED0' : '#09F' };"} &nbsp;
+                = lot.name
+              %td= lot.total_spots-lot.cars
+              %td= link_to "Open", lot_path(lot), class: "btn btn-mini"
+      = link_to "Add Lot (for now)", new_lot_path
 
