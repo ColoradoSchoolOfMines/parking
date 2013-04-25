@@ -16,6 +16,10 @@ module LotsHelper
       "parking_square_#{size.to_s}.png"
     end
 
+    def get_size_for_dimension( size, dim )
+      Parking::Application.config.parking_image_size[size][dim]
+    end
+
     private
 
     def get_ratio_for_dimension( size, dim )

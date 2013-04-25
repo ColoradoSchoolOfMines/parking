@@ -1,0 +1,23 @@
+// Place all the styles related to the Lots controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+<% environment.context_class.instance_eval { include LotsHelper } %>
+$img-width: <%= get_size_for_dimension( :original, Parking::Application.config.x)%>px;
+$img-height: <%= get_size_for_dimension( :original, Parking::Application.config.y )%>px;
+.lotView {
+    background-color:  #b1b1b1;
+}
+
+.mapview {
+    
+    img {
+        border:1px solid #888;
+        border-radius:10px;
+        width:$img-width !important;
+        height:$img-height !important;
+        min-width: $img-width !important;
+        min-height: $img-height !important;
+    }
+    
+}
+

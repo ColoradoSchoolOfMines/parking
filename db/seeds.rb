@@ -28,22 +28,22 @@ else
     rec.coordinates.create([ 
         {
             order: 0,
-            x: 549,
-            y: 227
+            x: 497,
+            y: 188
         },
         {
             order: 1,
-            x: 653,
-            y: 227
+            x: 602,
+            y: 188
         },
         {
             order: 2,
-            x: 656, 
-            y: 321,
+            x: 600, 
+            y: 285,
         },
         {
             order: 3,
-            x: 550,
-            y: 323
+            x: 496,
+            y: 286
         }])
 end
