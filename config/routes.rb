@@ -4,6 +4,10 @@ Parking::Application.routes.draw do
   
   resources :lots
 
+  namespace :admin do
+    resources :lots
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

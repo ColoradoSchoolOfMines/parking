@@ -1,0 +1,14 @@
+- content_for :side_pane do
+  .well.lotView
+    %table.table
+      %thead
+        %tr
+          %th Lot
+          %th Open Spots
+
+      %tbody
+        - Lot.all.each do |lot|
+          %tr
+            %td 
+              %span{style:"background-color:#{(lot.type_type == 'commuter') ? '#ED0' : '#09F' };"}= lot.name
+            %td= lot.total_spots-lot.cars
