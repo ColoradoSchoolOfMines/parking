@@ -11,36 +11,36 @@
           content:"width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;"}
 
   %body
-    .navbar.navbar-fixed-top
+    .navbar
       .navbar-inner
         .container
           %ul.nav
             %li
               %span.brand= link_to "acmX - Parking", root_path
             %li= link_to 'Parking Lots', lots_path, :title => "Click to see all parking lots"
-  #body
-    .container
-      .row
-        .span2
-          .sidebar-nav.sidebar-nav-fixed
-            = content_for :side_pane
-        .span8
-          #flashcontainer
-            - flash.each do |key, msg|
-              - if key == :information
-                .alert.alert-info
-                  %button.close{:'data-dismiss' => "alert"} ×
-                  = msg
-              - if key == :notice
-                .alert.alert-success
-                  %button.close{:'data-dismiss' => "alert"} ×
-                  = msg
-              - if key == :warning
-                .alert
-                  %button.close{:'data-dismiss' => "alert"} ×
-                  = msg
-              - if key == :error
-                .alert.alert-error
-                  %button.close{:'data-dismiss' => "alert"} ×
-                  = msg
-          = yield
+    #body
+      .container
+        .row
+          .span2
+            .sidebar-nav.sidebar-nav-fixed
+              = content_for :side_pane
+          .span8
+            #flashcontainer
+              - flash.each do |key, msg|
+                - if key == :information
+                  .alert.alert-info
+                    %button.close{:'data-dismiss' => "alert"} ×
+                    = msg
+                - if key == :notice
+                  .alert.alert-success
+                    %button.close{:'data-dismiss' => "alert"} ×
+                    = msg
+                - if key == :warning
+                  .alert
+                    %button.close{:'data-dismiss' => "alert"} ×
+                    = msg
+                - if key == :error
+                  .alert.alert-error
+                    %button.close{:'data-dismiss' => "alert"} ×
+                    = msg
+            = yield
