@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Api token:</b>
+  <%= @admin_sensor.api_token %>
+</p>
+
+<p>
+  <b>Lot:</b>
+  <%= @admin_sensor.lot_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_sensor_path(@admin_sensor) %> |
+<%= link_to 'Back', admin_sensors_path %>

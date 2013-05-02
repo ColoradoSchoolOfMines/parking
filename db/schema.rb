@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130327235115) do
+ActiveRecord::Schema.define(:version => 20130502212529) do
+
+  create_table "admin_sensors", :force => true do |t|
+    t.string   "api_token"
+    t.integer  "lot_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "coordinates", :force => true do |t|
     t.integer  "order"

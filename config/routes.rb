@@ -1,5 +1,10 @@
 Parking::Application.routes.draw do
 
+  namespace :admin do
+    resources :sensors
+  end
+
+
   match 'lots/delta' => 'lots#delta', :as => :delta
   
   resources :lots

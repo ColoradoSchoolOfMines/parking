@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  api_token: MyString
+  lot_id: 1
+
+two:
+  api_token: MyString
+  lot_id: 1
