@@ -1,5 +1,8 @@
 Parking::Application.routes.draw do
 
+  resources :events
+
+
   match 'lots/delta' => 'lots#delta', :as => :delta
   
   resources :lots

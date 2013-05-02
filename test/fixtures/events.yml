@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  time: 2013-05-02 17:50:40
+  delta: 1
+  lot_id: 1
+
+two:
+  time: 2013-05-02 17:50:40
+  delta: 1
+  lot_id: 1
